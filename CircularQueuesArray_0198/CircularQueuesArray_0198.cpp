@@ -11,7 +11,8 @@ public:
         REAR = -1;
     }
 
-    void insert() {
+    void insert() 
+    {
         int num;
         cout << "Enter a number: ";
         cin >> num;
@@ -38,5 +39,10 @@ public:
                 REAR = REAR + 1;
         }
         queue_array[REAR] = num;
+    }
+
+    void remove()
+    {
+
     }
 };
