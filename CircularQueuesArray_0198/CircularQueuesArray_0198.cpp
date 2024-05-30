@@ -51,5 +51,11 @@ public:
         }
         cout << "\nThe element deleted from the queue is: \n" << queue_array[FRONT] << "\n"; 
 
+        //cek apakah antrian hanya memlikii satu elemen
+        if (FRONT == REAR)
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
     }
 };
