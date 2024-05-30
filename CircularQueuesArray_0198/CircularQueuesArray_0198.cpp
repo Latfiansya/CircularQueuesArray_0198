@@ -49,7 +49,7 @@ public:
             cout << "Queue is underflow\n";
             return;
         }
-        cout << "\nThe element deleted from the queue is: \n" << queue_array[FRONT] << "\n";
+        cout << "\nThe element deleted from the queue is: \n" << queue_array[FRONT] << "\n"; 
 
     }
 };
