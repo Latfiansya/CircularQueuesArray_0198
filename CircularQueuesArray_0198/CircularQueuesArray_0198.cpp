@@ -104,7 +104,7 @@ public:
             //iterasi dari awal array hinga rear
             while (FRONT_Position <= REAR_Position)
             {
-                cout << queue_array[FRONT_Position] << "  " <<
+                cout << queue_array[FRONT_Position] << "  ";
                     FRONT_Position++;
             }
             cout << endl;
@@ -112,3 +112,51 @@ public:
     }
 };
 
+int main()
+{
+    Queues q;
+    char ch;
+
+    while (true)
+    {
+        try
+        {
+            cout << "Menu\n";
+            cout << "1. Implement insert operation\n";
+            cout << "2. Implement remove operation\n";
+            cout << "3. Display values\n";
+            cout << "4. Exit\n";
+            cout << "Enter your choice (1-4): ";
+            cin >> ch;
+            cout << endl;
+
+            switch (ch)
+            {
+                case '1': {
+                    q.insert();
+                    break;
+                }
+                case '2': {
+                    q.remove();
+                    break;
+                }
+                case '3': {
+                    q.display();
+                    break;
+                }
+                case '4': {
+                    return 0;
+                }
+                default: {
+                    cout << "Invalid option!!\n";
+                    break;
+                }
+            }
+        }
+        catch (exception& e)
+        {
+            cout << "Check for the values entered" << endl;
+        }
+    }
+    return 0;
+}
