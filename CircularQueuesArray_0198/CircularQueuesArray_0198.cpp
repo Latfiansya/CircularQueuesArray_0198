@@ -66,46 +66,49 @@ public:
                 FRONT = FRONT + 1;
         }
     }
-        void display()
+
+    void display()
+    {
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
+
+        //cek apakah antrian kosong
+        if (FRONT_Position == -1)
         {
-            int FRONT_Position = FRONT;
-            int REAR_Position = REAR;
-
-            //cek apakah antrian kosong
-            if (FRONT_Position == -1)
-            {
-                cout << "Queue is empty\n";
-                return;
-            }
-
-            cout << "\nElements in the queue are...\n";
-
-            //jika front <= rear, iterasi dari front hingga rear
-            if (FRONT_Position <= REAR_Position)
-            {
-                while (FRONT_Position <= REAR_Position)
-                {
-                    cout << queue_array[FRONT_Position] << "  " <<
-                        FRONT_Position++;
-                }
-                cout << endl;
-            }
-            else
-            {
-                //jika front > rear, iterasi dari front hingga akhir array
-                while (FRONT_Position <= max - 1)
-                {
-                    cout << queue_array[FRONT_Position] << "  " << FRONT_Position++;
-                }
-
-                FRONT_Position = 0;
-
-                //iterasi dari awal array hinga rear
-                while (FRONT_Position <= REAR_Position)
-                {
-                    cout << queue_array[FRONT_Position] << "  " <<
-                        FRONT_Position++;
-                }
-                cout << endl;
+            cout << "Queue is empty\n";
+            return;
         }
+
+        cout << "\nElements in the queue are...\n";
+
+        //jika front <= rear, iterasi dari front hingga rear
+        if (FRONT_Position <= REAR_Position)
+        {
+            while (FRONT_Position <= REAR_Position)
+            {
+                cout << queue_array[FRONT_Position] << "  " <<
+                    FRONT_Position++;
+            }
+            cout << endl;
+        }
+        else
+        {
+            //jika front > rear, iterasi dari front hingga akhir array
+            while (FRONT_Position <= max - 1)
+            {
+                cout << queue_array[FRONT_Position] << "  " << FRONT_Position++;
+            }
+
+            FRONT_Position = 0;
+
+            //iterasi dari awal array hinga rear
+            while (FRONT_Position <= REAR_Position)
+            {
+                cout << queue_array[FRONT_Position] << "  " <<
+                    FRONT_Position++;
+            }
+            cout << endl;
+        }
+    }
 };
+
