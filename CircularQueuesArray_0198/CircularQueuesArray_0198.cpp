@@ -2,7 +2,7 @@
 using namespace std;
 
 class Queues {
-    int FRONT, REAR, max = S;
+    int FRONT, REAR, max = 5;
     int queue_array[5];
 
 public:
@@ -65,8 +65,16 @@ public:
             else
                 FRONT = FRONT + 1;
         }
+
         void display()
         {
+            //cek apakah antrian kosong
+            if (FRONT == -1)
+            {
+                cout << "Queue is empty\n";
+                return;
+            }
+
 
         }
 
