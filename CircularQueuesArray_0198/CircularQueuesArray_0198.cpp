@@ -49,7 +49,7 @@ public:
             cout << "Queue is underflow\n";
             return;
         }
-        cout << "\nThe element deleted from the queue is: \n" << queue_array[FRONT] << "\n"; 
+        cout << "\nThe element deleted from the queue is: \n" << queue_array[FRONT] << "\n";
 
         //cek apakah antrian hanya memlikii satu elemen
         if (FRONT == REAR)
@@ -65,7 +65,7 @@ public:
             else
                 FRONT = FRONT + 1;
         }
-
+    }
         void display()
         {
             //cek apakah antrian kosong
@@ -77,8 +77,15 @@ public:
 
             cout << "\nElements in the queue are...\n";
 
-
+            //jika front <= rear, iterasi dari front hingga rear
+            if (FRONT <= REAR)
+            {
+                while (FRONT <= REAR)
+                {
+                    cout << queue_array[FRONT] << "  " <<
+                        FRONT++;
+                }
+                cout << endl;
+            }
         }
-
-    }
 };
